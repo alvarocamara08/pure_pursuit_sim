@@ -18,21 +18,21 @@ This project is currently under development.
 
 ## 🗂️ Project Structure
 
-pure_pursuit_sim/
-├── models/
-│ └── bicycle_model.py # Kinematic bicycle model
-├── controller/
-│ └── pure_pursuit.py # Pure Pursuit controller
-├── trajectory/
-│ └── path_generator.py # Reference path generation
-├── visualization/
-│ └── plotter.py # Real-time plotting
-├── tests/ # Unit tests
-├── docs/
-│ └── theory.md # Mathematical derivation
-├── main.py # Entry point
-├── config.py # All tunable parameters
-└── requirements.txt
+    pure_pursuit_sim/
+    ├── models/
+    │   └── bicycle_model.py       # Kinematic bicycle model
+    ├── controller/
+    │   └── pure_pursuit.py        # Pure Pursuit controller
+    ├── trajectory/
+    │   └── path_generator.py      # Reference path generation
+    ├── visualization/
+    │   └── plotter.py             # Real-time plotting
+    ├── tests/                     # Unit tests
+    ├── docs/
+    │   └── theory.md              # Mathematical derivation
+    ├── main.py                    # Entry point
+    ├── config.py                  # All tunable parameters
+    └── requirements.txt
 
 ## 📄 License
 

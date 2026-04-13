@@ -50,3 +50,30 @@ class PurePursuitController:
                 return point
 
         return path[-1]
+    
+    def compute_steering(self, vehicle_pos: np.ndarray, vehicle_heading: float, 
+                         lookahead_point: np.ndarray) -> float:
+        '''
+        Computes the steering angle using the Pure Pursuit algorithm.
+
+        Transforms the lookahead point to the vehicle's local frame, computes
+        the heading error alpha, and returns the required steering angle.
+
+        Args:
+            vehicle_pos:     Current vehicle position as [x, y].
+            vehicle_heading: Current vehicle heading [rad].
+            lookahead_point: Target lookahead point as [x, y].
+
+        Returns:
+            Steering angle delta [rad].
+        '''
+        dx = lookahead_point[0] - vehicle_pos[0]
+        dy = lookahead_point[1] - vehicle_pos[1]
+
+        x_local =  dx * np.cos(vehicle_heading) + dy * np.sin(vehicle_heading)
+        y_local = -dx * np.sin(vehicle_heading) + dy * np.cos(vehicle_heading)
+        alpha = np.arctan2(y_local, x_local)
+        
+        delta = np.arctan2(2 * self.L_wb * np.sin(alpha), self.L)
+
+        return delta

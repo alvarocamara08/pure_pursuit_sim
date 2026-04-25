@@ -87,9 +87,11 @@ Adjust parameters in `config.py` — lookahead distance, vehicle speed, path typ
 
 The kinematic bicycle model represents an Ackermann-steered vehicle referenced at the rear axle:
 
-ẋ     = v · cos(θ)
-ẏ     = v · sin(θ)
-θ̇     = v · tan(δ) / L_wb
+$$\dot{x} = v \cdot \cos(\theta)$$
+
+$$\dot{y} = v \cdot \sin(\theta)$$
+
+$$\dot{\theta} = \frac{v \cdot \tan(\delta)}{L_{wb}}$$
 
 | Parameter | Value | Description |
 |-----------|-------|-------------|

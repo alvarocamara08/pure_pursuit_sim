@@ -62,6 +62,7 @@ See [`docs/theory.md`](docs/theory.md) for the full mathematical derivation.
     ├── main.py                         # Entry point
     ├── config.py                       # All tunable parameters
     └── requirements.txt
+    └── LICENSE
 
 ---
 
